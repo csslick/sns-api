@@ -123,7 +123,7 @@ header a{
   width: 50px; height: 4px;
   background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.6));
   border-radius: 0 10px 10px 0;
-  transform: rotate(30deg) translate(0,0);
+  transform: rotate(30deg) translate(-400px, -100px);
   animation: star 4s;
   animation-fill-mode: forwards;
   animation-delay: 1s;
