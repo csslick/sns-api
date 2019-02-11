@@ -129,7 +129,7 @@ header a{
   animation-delay: 1s;
 }
 @keyframes star{
-  from{transform: rotate(20deg) translate(0,0);}
+  from{transform: rotate(20deg) translate(-400px, -100px);}
   to{
     transform: rotate(20deg) translate(2000px, 300px);
     opacity: 0;
