@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSSLICK Inspiration - Portfolio theme</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+  
+  <!-- 사용자 CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="container-fluid">
+    <div class="logo">
+      <h1>Inspiration</h1>
+      <p>CSSLICK Inspiration Portfolio Theme</p>
+    </div>  
+      <nav id="gnb">
+        <ul>
+          <li><a href="#">home</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#portfolio">portfolio</a></li>
+        </ul>
+      </nav>
+      <a href="#" id="btn-toggle" class="text-light"><i class="fas fa-bars fa-2x"></i></a>
+      <div class="star"></div>
+  </header>
+
+  <section id="about" class="container">
+    <article class="row">
+      <div class="col-md-6 text-left">
+          <h2>About</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A impedit quibusdam laudantium minus, iste odio
+            facere sapiente. Quaerat magni, maiores eos, ipsa aperiam earum autem ea culpa, saepe quos tenetur.</p>
+          <ul class="address mt-5">
+            <li><b>Name</b> Lorem ipsum</li>
+            <li><b>Phone</b> 010-123-1234</li>
+            <li><b>email</b> lorem@naver.com</li>
+          </ul>
+        </div>      
+      <div class="col-md-6">
+        <figure>
+          <img src="http://placeimg.com/400/400/p" alt="photo">
+        </figure>
+      </div>
+    </article>
+  </section>
+
+  <section id="portfolio" class="container-fluid">
+    <h2>portfolio</h2>
+    <article class="row">
+      <div class="col-md-4 photo mb-3">
+        <a href="#"><img src="http://placeimg.com/400/400/a1" alt="aa"></a>
+      </div>
+      <div class="col-md-4 photo mb-3">
+        <a href="#"><img src="http://placeimg.com/400/400/a2" alt="aa"></a>
+      </div>
+      <div class="col-md-4 photo mb-3">
+        <a href="#"><img src="http://placeimg.com/400/400/a3" alt="aa"></a>
+      </div>
+    </article>
+    <article class="row more">
+      <div class="col-md-12 text-center">
+        <h2 class="mt-5">열정과 성실함을 담아<br>귀사의 가치를 높이겠습니다!</h2>
+        <a href="#" class="btn btn-outline-dark mb-5">작품 보러가기</a>
+        <div class="sns" style="margin-top: 20px;">
+            <!-- kakao 공유버튼 -->
+            <div id="kakaostory-share-button" data-url="https://cafe.naver.com/csslick"></div>
+            <!-- 네이버 공유버튼 -->
+            <span>
+              <script type="text/javascript" src="https://ssl.pstatic.net/share/js/naver_sharebutton.js"></script>
+              <script type="text/javascript">
+                new ShareNaver.makeButton({
+                  "type": "c"
+                });
+              </script>
+            </span>
+            <!-- 트위터 -->
+            <!-- <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+          </div>
+      </div>
+    </article>
+  </section>
+
+  <footer class="container-fluid bg-dark">
+    <div class="container">
+      <p class="text-light text-center pt-3"><small>Copyright &copy; 2010 CSSLICK, Inspiration Portfolio Theme.</small></p>
+    </div>
+  </footer>
+
+
+  <script>
+    // 카카오
+    window.kakaoAsyncInit = function () {
+      Kakao.Story.createShareButton({
+        container: '#kakaostory-share-button'
+      });
+    };
+
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "//developers.kakao.com/sdk/js/kakao.story.min.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'kakao-js-sdk'));
+  </script>
+
+  <script>
+    // 네이버
+    function share() {
+      var myurl = 'https://cafe.naver.com/csslick';
+      var url = encodeURI(encodeURIComponent(myurl));
+      var title = encodeURI(myform.title.value);
+      var shareURL = "https://share.naver.com/web/shareView.nhn?url=" + url + "&title=" + title;
+      document.location = shareURL;
+    }
+  </script>
+
+  <script>
+    $(function(){
+      // $('#gnb').css('display', 'none');
+
+      $('#btn-toggle').click(function(){
+        $('#gnb')
+          .slideToggle(0.4)
+          .toggleClass('show');
+        
+        if($('#gnb').hasClass('show')){
+          $(this)
+            .find('i')
+            .removeClass('fa-bars')
+            .addClass('fa-times');
+        } else{
+          $(this)
+            .find('i')
+            .removeClass('fa-times')
+            .addClass('fa-bars')
+        }
+      });
+
+      $(window).resize(function(){
+        var w = $(window).width();
+        if (w >= 768){
+          $('#gnb').css('display', 'none');
+        }
+      })
+    })
+  </script>
+</body>
+
+</html>
