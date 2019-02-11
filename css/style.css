@@ -126,6 +126,7 @@ header a{
   transform: rotate(30deg) translate(0,0);
   animation: star 4s;
   animation-fill-mode: forwards;
+  animation-delay: 1s;
 }
 @keyframes star{
   from{transform: rotate(20deg) translate(0,0);}
