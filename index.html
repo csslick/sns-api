@@ -158,8 +158,16 @@
 
       $(window).resize(function(){
         var w = $(window).width();
+        // 모바일 break point(=미디어 쿼리)
         if (w >= 768){
+          // 화면 키우면 pc메뉴 강제 비표시
           $('#gnb').css('display', 'none');
+        } else{
+          // 화면 키우면 버튼 원상 복귀
+        $('header')
+          .find('i')
+          .removeClass('fa-times')
+          .addClass('fa-bars')
         }
       })
     })
