@@ -163,7 +163,8 @@
           // 화면 키우면 pc메뉴 강제 비표시
           $('#gnb').css('display', 'none');
         } else{
-          // 화면 키우면 버튼 원상 복귀
+          // 화면 키우면 메뉴가 강제로 닫힘
+        $('#gnb').removeClass('show')
         $('header')
           .find('i')
           .removeClass('fa-times')
